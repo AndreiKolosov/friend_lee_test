@@ -1,9 +1,23 @@
 .calculator {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
   &__title {
     grid-column: 1 / -1;
+    font-family: 'Nekst', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 54px;
+    line-height: 0.9;
+    color: #111;
+    margin: 0 0 32px 0;
+    max-width: 750px;
+    width: 100%;
+    word-wrap: break-word;
   }
 
   &__form {
