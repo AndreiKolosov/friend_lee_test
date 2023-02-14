@@ -1,2 +1,25 @@
 .calculator {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  &__title {
+    grid-column: 1 / -1;
+  }
+
+  &__form {
+    grid-column: 1 / -1;
+  }
+
+  &__sum {
+    grid-column: 1 / 2;
+  }
+
+  &__payment {
+    grid-column: 2 / 3;
+  }
+
+  &__submit-btn {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+  }
 }
