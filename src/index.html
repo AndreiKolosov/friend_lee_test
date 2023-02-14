@@ -12,7 +12,7 @@
   <section class="calculator">
     <h2 class="calculator__title">Рассчитайте стоимость автомобиля в лизинг</h2>
     <form class="form calculator__form" id="calculator">
-      <fieldset class="form__fieldset">
+      <fieldset class="form__fieldset form__cost">
         <legend class="form__legend">Стоимость автомобиля</legend>
         <input type="text" value="3 300 000" class="form__input">
         <label class="custom-range form__range">
@@ -39,8 +39,14 @@
         Оставить заявку
       </span>
     </button>
-    <p class="calculator__sum"><span>Сумма договора лизинга</span>4 467 313 &#8381;</p>
-    <p class="calculator__payment"> <span>Ежемесячный платеж от</span>114 455 &#8381;</p>
+    <p class="calculator__note calculator__sum">
+      Сумма договора лизинга
+      <span class="calculator__note-accent">4 467 313 &#8381;</span>
+    </p>
+    <p class="calculator__note calculator__payment">
+      Ежемесячный платеж от
+      <span class="calculator__note-accent">114 455 &#8381;</span>
+    </p>
   </section>
 </body>
 
