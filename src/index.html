@@ -11,26 +11,32 @@
 <body class="page">
   <section class="calculator">
     <h2 class="calculator__title">Рассчитайте стоимость автомобиля в лизинг</h2>
-    <form class="form">
-      <fieldset class="form__fildset">
-        <legend class="from__legend">Стоимость автомобиля</legend>
-        <input type="number" class="input input_type_amount">
-        <input type="range" class="range range_type_amount">
+    <form class="form" id="calculator">
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Стоимость автомобиля</legend>
+        <input type="text" value="3 300 000" class="form__input-number form__input_type_amount">
+        <label class="custom-range">
+          <input type="range" min="1" max="100" value="0" class="custom-range__input" id="myRange">
+        </label>
       </fieldset>
-      <fieldset class="form__fildset">
-        <legend class="from__legend">Первоначальный взнос</legend>
-        <input type="number" class="input input_type_amount">
-        <input type="range" class="range range_type_amount">
+      <fieldset class="form__fieldset form__payment">
+        <legend class="form__legend">Первоначальный взнос</legend>
+        <input type="text" value="420 000 &#8381;" class="form__input form__input_type_payment">
+        <label class="custom-range">
+          <input type="range" min="1" max="100" value="0" class="custom-range__input" id="myRange">
+        </label>
       </fieldset>
-      <fieldset class="form__fildset">
-        <legend class="from__legend">Срок лизинга</legend>
-        <input type="number" class="input input_type_amount">
-        <input type="range" class="range range_type_amount">
+      <fieldset class="form__fieldset form__term">
+        <legend class="form__legend">Срок лизинга</legend>
+        <input type="text" value="60" class="form__input form__input_type_term">
+        <label class="custom-range">
+          <input type="range" min="1" max="100" value="0" class="custom-range__input" id="myRange">
+        </label>
       </fieldset>
-      <button class="form__submit-btn">Оставить заявку</button>
     </form>
-    <p class="text calculator__amount"><span>Сумма договора лизинга</span>4 467 313 &#8381;</p>
-    <p class="text calculator__payment"> <span>Ежемесячный платеж от</span>114 455 &#8381;</p>
+    <button class="calculator__submit-btn" type="submit" form="calculator">Оставить заявку</button>
+    <p><span>Сумма договора лизинга</span>4 467 313 &#8381;</p>
+    <p> <span>Ежемесячный платеж от</span>114 455 &#8381;</p>
   </section>
 </body>
 

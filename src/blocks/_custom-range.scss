@@ -1,0 +1,49 @@
+.custom-range {
+  display: block;
+  max-width: 400px;
+  width: 100%;
+
+  &__input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #ff9514 0%, #ff9514 0%, #d3d3d3 0%, #d3d3d3 100%);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    border-radius: 10px;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #ff9514;
+      cursor: pointer;
+    }
+
+    &::-webkit-slider-thumb:hover,
+    &::-webkit-slider-thumb:active {
+      transform: scale(1.2);
+    }
+
+    &::-moz-range-thumb:hover,
+    &::-moz-range-thumb:active {
+      transform: scale(1.2);
+    }
+
+    &::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      background: #4caf50;
+      cursor: pointer;
+    }
+  }
+}

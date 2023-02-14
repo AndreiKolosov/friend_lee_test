@@ -1,5 +1,5 @@
-.f {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-}/*# sourceMappingURL=index.css.map */
+@import url(../vendor/fonts.css);
+@import url(../blocks/_page.scss);
+@import url(../blocks/_custom-range.scss);
+@import url(../blocks/_calculator.scss);
+@import url(../blocks/_form.scss);/*# sourceMappingURL=index.css.map */
