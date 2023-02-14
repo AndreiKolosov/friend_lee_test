@@ -95,4 +95,44 @@
     top: calc(50% - 48px);
     right: 24px;
   }
+
+  @media screen and (max-width: 1119px) {
+    & {
+      flex-direction: column;
+      gap: 39px 0;
+    }
+
+    &__term::after {
+      top: calc(50% - 26px);
+    }
+
+    &__cost::after {
+      top: calc(50% - 28px);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    & {
+      flex-direction: column;
+      gap: 25px 0;
+    }
+
+    &__legend {
+      margin: 0 0 8px 0;
+    }
+
+    &__input,
+    &__term::after,
+    &__cost::after {
+      font-size: 22px;
+    }
+
+    &__term::after {
+      top: calc(50% - 16px);
+    }
+
+    &__cost::after {
+      top: calc(50% - 18px);
+    }
+  }
 }
