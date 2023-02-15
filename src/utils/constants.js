@@ -9,6 +9,9 @@ export const paymentInput = calculatorForm.querySelector('.form__input_payment')
 export const paymentRange = calculatorForm.querySelector('.form__range_payment');
 export const paymentPercent = calculatorForm.querySelector('.form__payment-percent');
 
+export const termInput = calculatorForm.querySelector('.form__input_term');
+export const termRange = calculatorForm.querySelector('.form__range_term');
+
 //  Initial fields configs
 export const costFieldInitialConfig = {
   inputElm: costInput,
@@ -20,4 +23,10 @@ export const paymentFieldInitialConfig = {
   inputElm: paymentInput,
   percentElm: paymentPercent,
   priceValue: 3330000,
+};
+
+export const termFieldInitialConfig = {
+  inputElm: termInput,
+  rangeElm: termRange,
+  initialMonthValue: 60,
 };

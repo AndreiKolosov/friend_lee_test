@@ -9,9 +9,6 @@ export function initCostField({ rangeElm, inputElm }) {
 }
 
 export function onCostRangeInput(rangeElm, inputElm) {
-  if (rangeElm.value < 15) {
-    rangeElm.value = 15;
-  }
   inputElm.value = numberPrettifier(rangeElm.value * 1e5);
   setRangeBcg(rangeElm, rangeDiapason);
 }

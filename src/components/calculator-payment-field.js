@@ -16,16 +16,7 @@ export function initPaymentField({ rangeElm, inputElm, percentElm, priceValue })
 export function onPaymentRangeInput(rangeElm, inputElm, percentElm, priceElm) {
   const price = toNumber(priceElm.value);
 
-  if (rangeElm.value < minPercent) {
-    rangeElm.value = minPercent;
-    percentElm.textContent = `${minPercent}%`;
-  }
-  if (rangeElm.value > maxPercent) {
-    rangeElm.value = maxPercent;
-    percentElm.textContent = `${maxPercent}%`;
-  }
   percentElm.textContent = `${rangeElm.value}%`;
-
   inputElm.value = numberPrettifier((price / 100) * percentElm.textContent.replace('%', ''));
   setRangeBcg(rangeElm, rangeDiapason);
 }

@@ -7,6 +7,9 @@ import {
   paymentPercent,
   costFieldInitialConfig,
   paymentFieldInitialConfig,
+  termFieldInitialConfig,
+  termRange,
+  termInput,
 } from '../utils/constants';
 import { initCostField, onCostRangeInput, onCostTextInput, onCostTextBlur } from '../components/calculator-cost-field';
 import {
@@ -15,9 +18,11 @@ import {
   onPaymentTextBlur,
   onPaymentTextInput,
 } from '../components/calculator-payment-field';
+import { initTermField, onTermRangeInput, onTermTextBlur, onTermTextInput } from '../components/calculator-term-field';
 
 initCostField(costFieldInitialConfig);
 initPaymentField(paymentFieldInitialConfig);
+initTermField(termFieldInitialConfig);
 
 costRange.addEventListener('input', () => {
   onCostRangeInput(costRange, costInput);
@@ -37,3 +42,7 @@ paymentRange.addEventListener('input', () =>
 );
 paymentInput.addEventListener('input', () => onPaymentTextInput(paymentRange, paymentInput, paymentPercent, costInput));
 paymentInput.addEventListener('blur', () => onPaymentTextBlur(paymentRange, paymentInput, paymentPercent, costInput));
+
+termRange.addEventListener('input', () => onTermRangeInput(termRange, termInput));
+termInput.addEventListener('input', () => onTermTextInput(termRange, termInput));
+termInput.addEventListener('blur', () => onTermTextBlur(termRange, termInput));
