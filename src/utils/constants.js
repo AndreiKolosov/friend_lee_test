@@ -12,6 +12,9 @@ export const paymentPercent = calculatorForm.querySelector('.form__payment-perce
 export const termInput = calculatorForm.querySelector('.form__input_term');
 export const termRange = calculatorForm.querySelector('.form__range_term');
 
+export const dealSum = document.querySelector('.calculator__sum-value');
+export const monthlyPayment = document.querySelector('.calculator__payment-value');
+
 //  Initial fields configs
 export const costFieldInitialConfig = {
   inputElm: costInput,
