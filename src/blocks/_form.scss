@@ -68,17 +68,8 @@
     transform: translateY(-4px);
   }
 
-  &__term::after {
+  &__payment-percent {
     @extend %font-black;
-    position: absolute;
-    content: 'мес.';
-    top: calc(50% - 46px);
-    right: 24px;
-  }
-
-  &__payment::after {
-    @extend %font-black;
-    content: '13%';
     position: absolute;
     top: 7px;
     right: 7px;
@@ -86,6 +77,14 @@
     padding: 15px 17px;
     background-color: #ebebec;
     border-radius: 16px;
+  }
+
+  &__term::after {
+    @extend %font-black;
+    position: absolute;
+    content: 'мес.';
+    top: calc(50% - 46px);
+    right: 24px;
   }
 
   &__cost::after {

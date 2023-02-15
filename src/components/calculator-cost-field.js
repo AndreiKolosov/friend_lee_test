@@ -1,9 +1,11 @@
-import { setRangeBcg, numberPrettifier } from '../utils/utils';
+import { setRangeBcg, numberPrettifier, toNumber } from '../utils/utils';
 
-export function initCostField(rangeElm, inputElm) {
+const rangeDiapason = { min: 15, max: 100 };
+
+export function initCostField({ rangeElm, inputElm }) {
   inputElm.value = numberPrettifier(33.3 * 1e5);
   rangeElm.value = 33.3;
-  setRangeBcg(rangeElm);
+  setRangeBcg(rangeElm, rangeDiapason);
 }
 
 export function onCostRangeInput(rangeElm, inputElm) {
@@ -11,30 +13,30 @@ export function onCostRangeInput(rangeElm, inputElm) {
     rangeElm.value = 15;
   }
   inputElm.value = numberPrettifier(rangeElm.value * 1e5);
-  setRangeBcg(rangeElm);
+  setRangeBcg(rangeElm, rangeDiapason);
 }
 
-export function onCostInputInput(rangeElm, inputElm) {
-  const inputValue = +inputElm.value.replace(/\D/g, '');
+export function onCostTextInput(rangeElm, inputElm) {
+  const inputValue = toNumber(inputElm.value);
   const preparedInputValue = numberPrettifier(+inputValue);
 
   inputElm.value = preparedInputValue;
   rangeElm.value = inputValue / 1e5;
-  setRangeBcg(rangeElm);
+  setRangeBcg(rangeElm, rangeDiapason);
 }
 
-export function onCostInputBlur(rangeElm, inputElm) {
-  const inputValue = +inputElm.value.replace(/\s/g, '');
+export function onCostTextBlur(rangeElm, inputElm) {
+  const inputValue = toNumber(inputElm.value);
 
-  if (inputValue < 15 * 1e5) {
-    inputElm.value = numberPrettifier(15 * 1e5);
-    rangeElm.value = 15;
-    setRangeBcg(rangeElm);
+  if (inputValue < rangeDiapason.min * 1e5) {
+    inputElm.value = numberPrettifier(rangeDiapason.min * 1e5);
+    rangeElm.value = rangeDiapason.min;
+    setRangeBcg(rangeElm, rangeDiapason);
   }
 
-  if (inputValue > 100 * 1e5) {
-    inputElm.value = numberPrettifier(100 * 1e5);
-    rangeElm.value = 100;
-    setRangeBcg(rangeElm);
+  if (inputValue > rangeDiapason.max * 1e5) {
+    inputElm.value = numberPrettifier(rangeDiapason.max * 1e5);
+    rangeElm.value = rangeDiapason.max;
+    setRangeBcg(rangeElm, rangeDiapason);
   }
 }
